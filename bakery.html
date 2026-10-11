@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery & Savory Menu | THE ÉVADÈ</title>
+  <meta name="description" content="Discover THE ÉVADÈ bakery & savory selection: buttery croissants, glazed donuts, chocolate brownies, artisan cakes, and toasted panini sandwiches.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+            <line x1="6" y1="2" x2="6" y2="4"></line>
+            <line x1="10" y1="2" x2="10" y2="4"></line>
+            <line x1="14" y1="2" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>THE ÉVADÈ</h1>
+          <span>Artisan Café & Patisserie</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="bakery.html" class="nav-link active">Bakery & Treats</a></li>
+          <li><a href="coffee.html" class="nav-link">Coffee Menu</a></li>
+          <li><a href="loyalty.html" class="nav-link">Deals</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="loyalty.html" class="btn btn-gold">
+          <span>🔥</span> Deals
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="badge badge-gold" style="margin-bottom: 12px;">Fresh From The Kitchen</div>
+      <h1>THE ÉVADÈ Bakery, Desserts & Savories</h1>
+      <p>Handcrafted French croissants, decadent chocolate brownies, glazed donuts, signature cakes, and toasted savory sandwiches.</p>
+    </div>
+  </section>
+
+  <!-- ================= BAKERY ITEMS SECTION ================= -->
+  <main class="container">
+    <!-- Category Filter Buttons -->
+    <div class="filter-controls">
+      <button class="filter-btn bakery-filter-btn active" data-filter="all">All Items (12)</button>
+      <button class="filter-btn bakery-filter-btn" data-filter="croissant">🥐 Croissants</button>
+      <button class="filter-btn bakery-filter-btn" data-filter="donut">🍩 Donuts</button>
+      <button class="filter-btn bakery-filter-btn" data-filter="brownie">🍫 Brownies</button>
+      <button class="filter-btn bakery-filter-btn" data-filter="cake">🍰 Chocolate Cake</button>
+      <button class="filter-btn bakery-filter-btn" data-filter="sandwich">🥪 Sandwiches</button>
+    </div>
+
+    <!-- Bakery Items Grid -->
+    <div class="bakery-grid" id="bakeryGrid">
+      
+      <!-- ================= CROISSANTS ================= -->
+      <div class="bakery-card" data-category="croissant">
+        <div class="bakery-card-img">
+          <img src="assets/images/bakery.jpg" alt="Classic French Butter Croissant">
+          <span class="item-tag">Bestseller</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">French Croissant</div>
+          <h3>Classic Butter Croissant</h3>
+          <p>Authentic 27-layer flaky puff pastry rolled with pure French butter, golden and crispy on the outside, soft within.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 380</span>
+            <button class="order-mini-btn" onclick="showToast('Added Classic Croissant to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="croissant">
+        <div class="bakery-card-img">
+          <img src="assets/images/bakery.jpg" alt="Almond Frangipane Croissant">
+          <span class="item-tag">Chef's Choice</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">French Croissant</div>
+          <h3>Almond Frangipane Croissant</h3>
+          <p>Double-baked croissant filled with rich almond cream, crowned with toasted sliced almonds and powdered sugar.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 460</span>
+            <button class="order-mini-btn" onclick="showToast('Added Almond Croissant to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="croissant">
+        <div class="bakery-card-img">
+          <img src="assets/images/bakery.jpg" alt="Dark Chocolate Hazelnut Croissant">
+          <span class="item-tag">Sweet Favorite</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">French Croissant</div>
+          <h3>Chocolate Pain Au Chocolat</h3>
+          <p>Layered golden puff pastry stuffed with twin bars of 65% Belgian dark chocolate and roasted hazelnut spread.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 490</span>
+            <button class="order-mini-btn" onclick="showToast('Added Pain Au Chocolat to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= DONUTS ================= -->
+      <div class="bakery-card" data-category="donut">
+        <div class="bakery-card-img">
+          <img src="assets/images/desserts.jpg" alt="Classic Vanilla Glazed Donut">
+          <span class="item-tag">Fresh Daily</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Artisan Donut</div>
+          <h3>Classic Vanilla Glazed Donut</h3>
+          <p>Fluffy yeast donut dipped in a silky warm vanilla bean sugar glaze that melts in your mouth.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 240</span>
+            <button class="order-mini-btn" onclick="showToast('Added Glazed Donut to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="donut">
+        <div class="bakery-card-img">
+          <img src="assets/images/desserts.jpg" alt="Belgian Chocolate Glazed Donut">
+          <span class="item-tag">Indulgent</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Artisan Donut</div>
+          <h3>Belgian Chocolate Donut</h3>
+          <p>Rich chocolate dough dipped in decadent dark chocolate ganache, topped with crispy chocolate pearls.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 280</span>
+            <button class="order-mini-btn" onclick="showToast('Added Chocolate Donut to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= BROWNIES ================= -->
+      <div class="bakery-card" data-category="brownie">
+        <div class="bakery-card-img">
+          <img src="assets/images/desserts.jpg" alt="Fudge Walnut Brownie">
+          <span class="item-tag">Signature</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Gourmet Brownie</div>
+          <h3>Fudge Walnut Brownie</h3>
+          <p>Ultra-dense dark chocolate fudge brownie loaded with roasted California walnuts and warm fudge drizzle.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 320</span>
+            <button class="order-mini-btn" onclick="showToast('Added Walnut Brownie to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="brownie">
+        <div class="bakery-card-img">
+          <img src="assets/images/desserts.jpg" alt="Salted Caramel Fudge Brownie">
+          <span class="item-tag">Top Rated</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Gourmet Brownie</div>
+          <h3>Salted Caramel Fudge Brownie</h3>
+          <p>Gooey chocolate brownie baked with liquid salted caramel ribbons and finished with sea salt crystals.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 360</span>
+            <button class="order-mini-btn" onclick="showToast('Added Caramel Brownie to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CHOCOLATE CAKE ================= -->
+      <div class="bakery-card" data-category="cake">
+        <div class="bakery-card-img">
+          <img src="assets/images/desserts.jpg" alt="Triple Chocolate Fudge Cake">
+          <span class="item-tag">Crowd Favorite</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Chocolate Cake</div>
+          <h3>Triple Chocolate Fudge Cake</h3>
+          <p>Moist triple-layer dark chocolate sponge enveloped in silky chocolate buttercream and glossy mirror glaze.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 640</span>
+            <button class="order-mini-btn" onclick="showToast('Added Triple Chocolate Cake to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="cake">
+        <div class="bakery-card-img">
+          <img src="assets/images/desserts.jpg" alt="Belgian Dark Chocolate Ganache Cake">
+          <span class="item-tag">Chef Special</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Chocolate Cake</div>
+          <h3>Dark Chocolate Ganache Cake</h3>
+          <p>Rich 70% dark Belgian cocoa ganache layered with moist chocolate sponge and melted chocolate curls.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 650</span>
+            <button class="order-mini-btn" onclick="showToast('Added Dark Chocolate Cake to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SANDWICHES ================= -->
+      <div class="bakery-card" data-category="sandwich">
+        <div class="bakery-card-img">
+          <img src="assets/images/sandwiches.jpg" alt="Smoked Chicken Pesto Panini">
+          <span class="item-tag">Hot Grilled</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Artisan Sandwich</div>
+          <h3>Smoked Chicken Pesto Panini</h3>
+          <p>Tender herb-smoked chicken breast, melted mozzarella, fresh baby arugula, and basil pesto on toasted sourdough.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 680</span>
+            <button class="order-mini-btn" onclick="showToast('Added Smoked Chicken Panini to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="sandwich">
+        <div class="bakery-card-img">
+          <img src="assets/images/sandwiches.jpg" alt="Roast Beef & Cheddar Melt">
+          <span class="item-tag">Executive Choice</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Artisan Sandwich</div>
+          <h3>Roast Beef & Aged Cheddar Melt</h3>
+          <p>Thinly carved spiced roast beef, caramelized onions, sharp English cheddar, and whole-grain mustard mayonnaise.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 740</span>
+            <button class="order-mini-btn" onclick="showToast('Added Roast Beef Melt to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bakery-card" data-category="sandwich">
+        <div class="bakery-card-img">
+          <img src="assets/images/sandwiches.jpg" alt="Caprese Tomato Mozzarella Grilled Sandwich">
+          <span class="item-tag">Vegetarian</span>
+        </div>
+        <div class="bakery-card-body">
+          <div class="bakery-category">Artisan Sandwich</div>
+          <h3>Caprese Mozzarella Melt</h3>
+          <p>Fresh buffalo mozzarella, ripe heirloom tomatoes, wild rocket, and balsamic glaze on rustic olive focaccia.</p>
+          <div class="card-footer">
+            <span class="price">Rs. 620</span>
+            <button class="order-mini-btn" onclick="showToast('Added Caprese Melt to tray!')">+ Add to Tray</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= CONTACT STRIP ================= -->
+  <section class="contact-highlight-strip">
+    <div class="container">
+      <div class="contact-strip-grid">
+        <div class="contact-box">
+          <div class="contact-box-icon">📞</div>
+          <div class="contact-box-info">
+            <h4>Call & WhatsApp Orders</h4>
+            <p><a href="tel:03369988183">0336 9988183</a> / <a href="tel:03299888183">0329 9888183</a></p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">📍</div>
+          <div class="contact-box-info">
+            <h4>Kitchen & Counter</h4>
+            <p>Near University of Education, Vehari</p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">⏰</div>
+          <div class="contact-box-info">
+            <h4>Fresh Batch Timings</h4>
+            <p>Hot Batches: 8:00 AM & 3:30 PM</p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">🎁</div>
+          <div class="contact-box-info">
+            <h4>Deals Reward</h4>
+            <p>Any item free after 7 visits!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="font-weight: 600;">THE ÉVADÈ Café & Patisserie</p>
+      <div class="footer-copy">&copy; 2026 THE ÉVADÈ. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals & Stamp Card | THE ÉVADÈ</title>
+  <meta name="description" content="Explore THE ÉVADÈ special combo deals and 7-visit loyalty stamp program. Earn Rs. 2,000 in free cafe treats on your 7th visit!">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+            <line x1="6" y1="2" x2="6" y2="4"></line>
+            <line x1="10" y1="2" x2="10" y2="4"></line>
+            <line x1="14" y1="2" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>THE ÉVADÈ</h1>
+          <span>Artisan Café & Patisserie</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="bakery.html" class="nav-link">Bakery & Treats</a></li>
+          <li><a href="coffee.html" class="nav-link">Coffee Menu</a></li>
+          <li><a href="loyalty.html" class="nav-link active">Deals</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="loyalty.html" class="btn btn-gold">
+          <span>🔥</span> Deals
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner loyalty-banner">
+    <div class="container">
+      <div class="badge badge-gold" style="margin-bottom: 12px;">Deals & Special Offers</div>
+      <h1>THE ÉVADÈ Deals</h1>
+      <p>Demonstrating how repeat customers are built: A 7-circle physical & digital stamp card and high-value combo deals.</p>
+    </div>
+  </section>
+
+  <!-- ================= 7-CIRCLE LOYALTY CARD SHOWCASE ================= -->
+  <main class="container">
+    <section class="loyalty-showcase-box">
+      <div class="loyalty-grid">
+        
+        <!-- Left Column: Business Concept Explanation -->
+        <div class="loyalty-left">
+          <div class="badge badge-gold">The 7-Visit Deals Card</div>
+          <h2>How It Works & Retains Customers</h2>
+          <p>
+            Every guest receives an exclusive membership card featuring <strong>7 stamp slots</strong>. Each time a customer visits or places an order, they receive a verified <strong>stamp mark (✓)</strong> on their card.
+          </p>
+
+          <div class="reward-highlight-card">
+            <div class="reward-icon">🎁</div>
+            <div class="reward-text">
+              <h4>7th Visit Grand Reward: Rs. 2,000 FREE</h4>
+              <p>As soon as all 7 circles are completed, the customer unlocks Rs. 2,000 worth of cafe favorites (Specialty Coffees, Pastries, or Cakes) completely <strong>FREE</strong>!</p>
+            </div>
+          </div>
+
+          <div class="stamp-actions">
+            <button class="btn btn-gold" id="addStampBtn">
+              <span>☕</span> Mark Customer Visit (+1 Stamp)
+            </button>
+            <button class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;" id="resetCardBtn">
+              🔄 Reset Demo for Presentation
+            </button>
+          </div>
+          <small style="color: #AB988C; display: block; margin-top: 10px;">
+            Tip: You can also click directly on any circle slot to toggle stamps for presentation!
+          </small>
+        </div>
+
+        <!-- Right Column: Interactive Digital Stamp Card -->
+        <div class="loyalty-right">
+          <div class="digital-stamp-card" id="digitalCard">
+            <div class="card-header-vip">
+              <div class="vip-title">
+                <h3>THE ÉVADÈ</h3>
+                <span>VIP Patron Club Card</span>
+              </div>
+              <div class="vip-badge-chip">GOLD MEMBER</div>
+            </div>
+
+            <!-- The 7 Stamp Circles Container -->
+            <div class="circles-container">
+              <!-- Circle 1 -->
+              <div class="circle-slot" data-stamp-index="1" title="Visit 1">
+                <span class="circle-number">#1</span>
+                <span class="circle-icon">☕</span>
+              </div>
+
+              <!-- Circle 2 -->
+              <div class="circle-slot" data-stamp-index="2" title="Visit 2">
+                <span class="circle-number">#2</span>
+                <span class="circle-icon">☕</span>
+              </div>
+
+              <!-- Circle 3 -->
+              <div class="circle-slot" data-stamp-index="3" title="Visit 3">
+                <span class="circle-number">#3</span>
+                <span class="circle-icon">☕</span>
+              </div>
+
+              <!-- Circle 4 -->
+              <div class="circle-slot" data-stamp-index="4" title="Visit 4">
+                <span class="circle-number">#4</span>
+                <span class="circle-icon">☕</span>
+              </div>
+
+              <!-- Circle 5 -->
+              <div class="circle-slot" data-stamp-index="5" title="Visit 5">
+                <span class="circle-number">#5</span>
+                <span class="circle-icon">☕</span>
+              </div>
+
+              <!-- Circle 6 -->
+              <div class="circle-slot" data-stamp-index="6" title="Visit 6">
+                <span class="circle-number">#6</span>
+                <span class="circle-icon">☕</span>
+              </div>
+
+              <!-- Circle 7 (GRAND REWARD!) -->
+              <div class="circle-slot special-reward" data-stamp-index="7" title="Visit 7 - Unlocks Free Rs. 2,000 Voucher">
+                <span class="circle-number">#7 FREE</span>
+                <span class="circle-icon">🎁</span>
+              </div>
+            </div>
+
+            <!-- Progress Meter -->
+            <div class="progress-info">
+              <span>Card Progress:</span>
+              <span id="stampsCountLabel">3 of 7 Visits Completed</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" id="progressFill" style="width: 43%;"></div>
+            </div>
+
+            <div class="stamp-card-footer">
+              <p>⭐️ Valid at all THE ÉVADÈ counters. Redeemable on any beverage or food item up to Rs. 2,000 value.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PREMIUM DISCOUNTED DEALS & OFFERS ================= -->
+    <section class="section-padding" style="padding-top: 0;">
+      <div class="section-header text-center">
+        <div class="badge">Limited-Time Savings</div>
+        <h2>Special Combos & Discounted Deals</h2>
+        <p>Carefully engineered combo packages featuring our new coffees, freshly baked brownies, croissants, and panini sandwiches.</p>
+      </div>
+
+      <div class="deals-grid">
+        
+        <!-- DEAL 1: Morning Classic -->
+        <div class="deal-card">
+          <div class="deal-badge">Breakfast Saver</div>
+          <h3>The Morning Classic Duo</h3>
+          <p>Fresh oven-baked pastry paired with our top-selling artisan coffee.</p>
+          <ul class="deal-items-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1x Classic French Butter Croissant
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1x ÉVADÈ Signature Cappuccino or Flat White
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Earns 1 Visit Stamp on Member Card
+            </li>
+          </ul>
+          <div class="deal-pricing">
+            <span class="deal-price-current">Rs. 720</span>
+            <span class="deal-price-old">Rs. 820</span>
+            <span class="deal-save-tag">Save Rs. 100</span>
+          </div>
+          <button class="btn btn-primary" onclick="showToast('Claimed Morning Classic Duo deal!')">Claim Offer</button>
+        </div>
+
+        <!-- DEAL 2: Sweet Craving -->
+        <div class="deal-card popular">
+          <div class="deal-badge">Most Popular</div>
+          <h3>Afternoon Sweet Indulgence</h3>
+          <p>Decadent dark chocolate paired with sweet caramel espresso.</p>
+          <ul class="deal-items-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1x Fudge Walnut Brownie
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1x Caramel Macchiato (Hot or Iced)
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Complimentary Chocolate Drizzle
+            </li>
+          </ul>
+          <div class="deal-pricing">
+            <span class="deal-price-current">Rs. 840</span>
+            <span class="deal-price-old">Rs. 940</span>
+            <span class="deal-save-tag">Save Rs. 100</span>
+          </div>
+          <button class="btn btn-gold" onclick="showToast('Claimed Sweet Indulgence deal!')">Claim Offer</button>
+        </div>
+
+        <!-- DEAL 3: Executive Lunch -->
+        <div class="deal-card">
+          <div class="deal-badge">Executive Lunch</div>
+          <h3>Executive Panini & Cold Brew</h3>
+          <p>Wholesome hot savory lunch paired with refreshing slow-steeped cold coffee.</p>
+          <ul class="deal-items-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1x Smoked Chicken Pesto Panini
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              1x 18-Hour Slow Cold Brew
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Side of Crisp Salted Potato Chips
+            </li>
+          </ul>
+          <div class="deal-pricing">
+            <span class="deal-price-current">Rs. 1,090</span>
+            <span class="deal-price-old">Rs. 1,240</span>
+            <span class="deal-save-tag">Save Rs. 150</span>
+          </div>
+          <button class="btn btn-primary" onclick="showToast('Claimed Executive Panini deal!')">Claim Offer</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= REWARD UNLOCK POPUP MODAL ================= -->
+  <div class="modal-overlay" id="rewardModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+      <div class="modal-celebration-icon">🎉</div>
+      <div class="badge badge-gold" style="margin-bottom: 12px;">7 Visits Completed!</div>
+      <h3>Congratulations! Reward Unlocked</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        The customer has successfully completed all 7 visits! They can now choose any complimentary items from our entire menu up to Rs. 2,000 value.
+      </p>
+
+      <div class="voucher-highlight">
+        <span>THE ÉVADÈ Gift Voucher</span>
+        <div class="amount">Rs. 2,000 FREE</div>
+        <small style="color: var(--primary);">Valid on Coffees, Pastries, Cakes & Sandwiches</small>
+      </div>
+
+      <button class="btn btn-gold" id="claimRewardBtn" style="width: 100%;">
+        🎁 Redeem Voucher At Counter
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= CONTACT STRIP ================= -->
+  <section class="contact-highlight-strip">
+    <div class="container">
+      <div class="contact-strip-grid">
+        <div class="contact-box">
+          <div class="contact-box-icon">👑</div>
+          <div class="contact-box-info">
+            <h4>Deals Desk</h4>
+            <p>Member cards issued on 1st order</p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">📞</div>
+          <div class="contact-box-info">
+            <h4>Inquiries & Reservations</h4>
+            <p><a href="tel:03369988183">0336 9988183</a> / <a href="tel:03299888183">0329 9888183</a></p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">📍</div>
+          <div class="contact-box-info">
+            <h4>Main Café Branch</h4>
+            <p>Near University of Education, Vehari</p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">☕</div>
+          <div class="contact-box-info">
+            <h4>Assignment Presentation</h4>
+            <p>Prepared for Business Review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="font-weight: 600;">THE ÉVADÈ Café & Patisserie</p>
+      <div class="footer-copy">&copy; 2026 THE ÉVADÈ. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

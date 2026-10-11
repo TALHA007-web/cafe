@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialty Coffee Menu | THE ÉVADÈ</title>
+  <meta name="description" content="Explore THE ÉVADÈ coffee menu. Handcrafted hot coffee, iced cold brews, special flavoured lattes, and specialty beverages sorted from low to high prices.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= SITE HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+            <line x1="6" y1="2" x2="6" y2="4"></line>
+            <line x1="10" y1="2" x2="10" y2="4"></line>
+            <line x1="14" y1="2" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>THE ÉVADÈ</h1>
+          <span>Artisan Café & Patisserie</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="bakery.html" class="nav-link">Bakery & Treats</a></li>
+          <li><a href="coffee.html" class="nav-link active">Coffee Menu</a></li>
+          <li><a href="loyalty.html" class="nav-link">Deals</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="loyalty.html" class="btn btn-gold">
+          <span>🔥</span> Deals
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE BANNER ================= -->
+  <section class="page-banner coffee-banner">
+    <div class="container">
+      <div class="badge badge-gold" style="margin-bottom: 12px;">Specialty Roasted 100% Arabica</div>
+      <h1>THE ÉVADÈ Coffee Experience</h1>
+      <p>Master-crafted Hot Coffee, Iced Cold Brews, and Special Flavoured Creations. Sorted transparently with Low to High price filtering.</p>
+    </div>
+  </section>
+
+  <!-- ================= COFFEE MENU SECTION ================= -->
+  <main class="container">
+
+    <!-- Interactive Sort & Filter Toolbar -->
+    <div class="coffee-toolbar">
+      <!-- Filter Category Buttons -->
+      <div class="filter-controls" style="margin-bottom: 0;">
+        <button class="filter-btn coffee-filter-btn active" data-filter="all">All Drinks (22)</button>
+        <button class="filter-btn coffee-filter-btn" data-filter="hot">☕ Hot Coffee (7)</button>
+        <button class="filter-btn coffee-filter-btn" data-filter="cold">🧊 Cold Coffee (6)</button>
+        <button class="filter-btn coffee-filter-btn" data-filter="flavoured">✨ Flavoured Coffee (6)</button>
+        <button class="filter-btn coffee-filter-btn" data-filter="extra">🍵 Extra Beverages (3)</button>
+      </div>
+
+      <!-- Low to High Sort Selector -->
+      <div class="sort-container">
+        <label for="coffeeSortSelect">Sort Pricing:</label>
+        <select id="coffeeSortSelect" class="sort-select">
+          <option value="low-to-high" selected>Price: Low to High (Rs. 260 → Rs. 660)</option>
+          <option value="high-to-low">Price: High to Low (Rs. 660 → Rs. 260)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Coffees Grid -->
+    <div class="coffee-grid" id="coffeeGrid">
+
+      <!-- ================= 1. HOT COFFEE ================= -->
+      
+      <!-- Espresso -->
+      <div class="coffee-item-card" data-price="260" data-category="hot">
+        <div class="coffee-card-thumb">☕</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Espresso</h3>
+          <p>Pure concentrated 30ml single-origin shot extracted at 9 bars with dense golden crema.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+            </div>
+            <span>(Dark & Bold)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 260</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Espresso!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Americano -->
+      <div class="coffee-item-card" data-price="320" data-category="hot">
+        <div class="coffee-card-thumb">💧</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Americano</h3>
+          <p>Rich double espresso lengthened with piping hot filtered mineral water for a clean aromatic finish.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Medium Roast)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 320</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Americano!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Macchiato -->
+      <div class="coffee-item-card" data-price="380" data-category="hot">
+        <div class="coffee-card-thumb">☁️</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Macchiato</h3>
+          <p>Traditional Italian espresso "stained" with a dollop of dense warm microfoam milk.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Intense Velvet)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 380</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Macchiato!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cappuccino -->
+      <div class="coffee-item-card" data-price="440" data-category="hot">
+        <div class="coffee-card-thumb">☕</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Cappuccino</h3>
+          <p>Classic 1:1:1 harmony of rich espresso, steamed dairy milk, and a luxurious cloud of foam dusted with cinnamon.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Creamy Classic)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 440</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Cappuccino!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Café Latte -->
+      <div class="coffee-item-card" data-price="460" data-category="hot">
+        <div class="coffee-card-thumb">🥛</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Café Latte</h3>
+          <p>A gentle balance of freshly pulled espresso and generous steamed milk topped with delicate barista latte art.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Smooth & Silky)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 460</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Café Latte!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flat White -->
+      <div class="coffee-item-card" data-price="480" data-category="hot">
+        <div class="coffee-card-thumb">✨</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Flat White</h3>
+          <p>Double ristretto blended with thin velvety microfoam milk. Originating from Melbourne coffee houses.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Punchy & Smooth)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 480</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Flat White!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mocha -->
+      <div class="coffee-item-card" data-price="520" data-category="hot">
+        <div class="coffee-card-thumb">🍫</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Hot Coffee</span>
+          <h3>Mocha</h3>
+          <p>Espresso melted into artisan cocoa chocolate and warm milk, topped with chocolate drizzle.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Chocolate Roast)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 520</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Mocha!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 2. COLD COFFEE ================= -->
+
+      <!-- Iced Americano -->
+      <div class="coffee-item-card" data-price="360" data-category="cold">
+        <div class="coffee-card-thumb">🧊</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Cold Coffee</span>
+          <h3>Iced Americano</h3>
+          <p>Double shot espresso poured over crisp chilled mineral water and crystal ice cubes.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Crisp Refreshing)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 360</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Iced Americano!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iced Latte -->
+      <div class="coffee-item-card" data-price="500" data-category="cold">
+        <div class="coffee-card-thumb">🥛</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Cold Coffee</span>
+          <h3>Iced Latte</h3>
+          <p>Cold farm milk poured over ice, gently layered with fresh bold espresso shot.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Creamy Chill)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 500</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Iced Latte!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iced Cappuccino -->
+      <div class="coffee-item-card" data-price="520" data-category="cold">
+        <div class="coffee-card-thumb">❄️</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Cold Coffee</span>
+          <h3>Iced Cappuccino</h3>
+          <p>Chilled espresso and milk crowned with an airy layer of cold-frothed dense milk foam.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Frothy & Cold)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 520</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Iced Cappuccino!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cold Brew -->
+      <div class="coffee-item-card" data-price="560" data-category="cold">
+        <div class="coffee-card-thumb">⌛</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Cold Coffee</span>
+          <h3>Cold Brew</h3>
+          <p>Steeped cold for 18 continuous hours. Low acidity, naturally sweet notes of chocolate and stone fruit.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Smooth Reserve)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 560</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Cold Brew!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iced Mocha -->
+      <div class="coffee-item-card" data-price="590" data-category="cold">
+        <div class="coffee-card-thumb">🍫</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Cold Coffee</span>
+          <h3>Iced Mocha</h3>
+          <p>Chilled dark Belgian chocolate sauce, freshly pulled espresso, and cold milk over ice.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Chocolaty Chill)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 590</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Iced Mocha!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frappuccino -->
+      <div class="coffee-item-card" data-price="640" data-category="cold">
+        <div class="coffee-card-thumb">🍨</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Cold Coffee</span>
+          <h3>Frappuccino</h3>
+          <p>Blended ice, espresso roast, milk, and sweet vanilla syrup, crowned with fresh whipped cream.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Blended Indulgence)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 640</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Frappuccino!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 3. SPECIAL FLAVOURED COFFEE ================= -->
+
+      <!-- Hazelnut Coffee -->
+      <div class="coffee-item-card" data-price="520" data-category="flavoured">
+        <div class="coffee-card-thumb">🌰</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Special Flavoured</span>
+          <h3>Hazelnut Coffee</h3>
+          <p>Espresso infused with roasted Piedmont hazelnut extract and velvety warm milk.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Nutty Aromatic)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 520</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Hazelnut Coffee!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vanilla Latte -->
+      <div class="coffee-item-card" data-price="540" data-category="flavoured">
+        <div class="coffee-card-thumb">🌿</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Special Flavoured</span>
+          <h3>Vanilla Latte</h3>
+          <p>Madagascar vanilla bean syrup infused with double espresso and creamy steamed milk.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Fragrant Sweet)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 540</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Vanilla Latte!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caramel Latte -->
+      <div class="coffee-item-card" data-price="560" data-category="flavoured">
+        <div class="coffee-card-thumb">🍯</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Special Flavoured</span>
+          <h3>Caramel Latte</h3>
+          <p>Golden salted butter caramel syrup folded seamlessly into silky espresso and steamed milk.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Rich Caramel)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 560</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Caramel Latte!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chocolate Mocha -->
+      <div class="coffee-item-card" data-price="590" data-category="flavoured">
+        <div class="coffee-card-thumb">🍫</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Special Flavoured</span>
+          <h3>Chocolate Mocha</h3>
+          <p>Double chocolate ganache blended with bold espresso and topped with shaved Belgian dark chocolate.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Double Fudge)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 590</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Chocolate Mocha!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caramel Macchiato -->
+      <div class="coffee-item-card" data-price="620" data-category="flavoured">
+        <div class="coffee-card-thumb">✨</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Special Flavoured</span>
+          <h3>Caramel Macchiato</h3>
+          <p>Vanilla-sweetened milk marked with rich espresso and drizzled with a decadent caramel crosshatch.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Customer Favorite)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 620</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Caramel Macchiato!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Irish Cream Flavoured Coffee (non-alcoholic version) -->
+      <div class="coffee-item-card" data-price="660" data-category="flavoured">
+        <div class="coffee-card-thumb">☘️</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Special Flavoured</span>
+          <h3>Irish Cream Flavoured Coffee</h3>
+          <p>Rich espresso infused with non-alcoholic Irish cream notes, vanilla cream, and cacao aroma.</p>
+          <div class="coffee-roast-meter">
+            <span>Roast:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Luxurious Roast)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 660</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Irish Cream Coffee!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 4. EXTRA BEVERAGES ================= -->
+
+      <!-- Green Tea -->
+      <div class="coffee-item-card" data-price="280" data-category="extra">
+        <div class="coffee-card-thumb">🍵</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Extra Beverages</span>
+          <h3>Green Tea</h3>
+          <p>Whole-leaf organic jasmine and pure green tea brewed to light golden perfection. High in antioxidants.</p>
+          <div class="coffee-roast-meter">
+            <span>Profile:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Floral & Calming)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 280</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Green Tea!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hot Chocolate -->
+      <div class="coffee-item-card" data-price="480" data-category="extra">
+        <div class="coffee-card-thumb">☕</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Extra Beverages</span>
+          <h3>Hot Chocolate</h3>
+          <p>Slow melted Belgian chocolate with whole steamed milk, finished with mini marshmallows and cocoa dust.</p>
+          <div class="coffee-roast-meter">
+            <span>Profile:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot"></span>
+            </div>
+            <span>(Rich Cocoa Sweet)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 480</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Hot Chocolate!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milkshakes -->
+      <div class="coffee-item-card" data-price="580" data-category="extra">
+        <div class="coffee-card-thumb">🥤</div>
+        <div class="coffee-item-info">
+          <span class="coffee-category-badge">Extra Beverages</span>
+          <h3>Milkshakes</h3>
+          <p>Blended dairy ice cream shake available in Belgian Chocolate, Strawberry Velvet, or Vanilla Bean.</p>
+          <div class="coffee-roast-meter">
+            <span>Profile:</span>
+            <div class="roast-dots">
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+              <span class="roast-dot active"></span>
+            </div>
+            <span>(Thick & Decadent)</span>
+          </div>
+          <div class="coffee-item-bottom">
+            <span class="coffee-price">Rs. 580</span>
+            <button class="order-mini-btn" onclick="showToast('Selected Milkshake!')">+ Order</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= CONTACT STRIP ================= -->
+  <section class="contact-highlight-strip">
+    <div class="container">
+      <div class="contact-strip-grid">
+        <div class="contact-box">
+          <div class="contact-box-icon">☕</div>
+          <div class="contact-box-info">
+            <h4>Bean Roasting Days</h4>
+            <p>Fresh roast batches every Tuesday & Saturday</p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">📞</div>
+          <div class="contact-box-info">
+            <h4>Phone & WhatsApp</h4>
+            <p><a href="tel:03369988183">0336 9988183</a> / <a href="tel:03299888183">0329 9888183</a></p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">📍</div>
+          <div class="contact-box-info">
+            <h4>Espresso Bar Location</h4>
+            <p>Near University of Education, Vehari</p>
+          </div>
+        </div>
+        <div class="contact-box">
+          <div class="contact-box-icon">👑</div>
+          <div class="contact-box-info">
+            <h4>Deals Perk</h4>
+            <p>7th visit unlocks any beverage + treats (Rs. 2,000)!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="font-weight: 600;">THE ÉVADÈ Café & Patisserie</p>
+      <div class="footer-copy">&copy; 2026 THE ÉVADÈ. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
